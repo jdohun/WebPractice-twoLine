@@ -1,0 +1,107 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #00EBFF;
+	text-align: center;
+}
+
+#contents {
+	width: 700px;
+	margin: 20px auto;
+	text-align: center;
+	border: 3px solid #000000;
+	background:#46FFFF;
+}
+
+hr {
+	border: 0;
+    height: 4px;
+    background-color:#000000; 
+}
+
+ #title {
+	text-align: center;
+	padding: 5px;
+	height: 40px;
+	margin: 10px;
+}
+
+.memoInputForm {
+	text-align: center;
+	margin: 10px auto;
+}
+
+#memoInput {
+	padding: 2px 2px 2px 7px;
+	width: 290px;
+	height: 30px;
+}
+
+#memoSubmit {
+	padding: 2px;
+	width: 100px;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	background: #32A4FF;
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+#memoList {
+	width : 95%;
+	margin: 10px auto;
+}
+
+#memoList, #memoList th, #memoList td{
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	height:44px;
+}
+
+
+.memoNumber {
+	width : 150px;	
+}
+
+.memoContents {
+	padding: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.memoContents span{
+	display: inline-block;
+}
+
+.wdate {
+	width: 200px;
+}
+
+.memoDeleteForm {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.deleteMemo {
+	padding : 6px 1px;
+}
+
+.delete {
+	width: 30px;
+	height: 20px;
+	background-color: #FF3232;
+	vertical-align: middle;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+#submit:hover, .delete:hover {
+	background: #000000;
+}
