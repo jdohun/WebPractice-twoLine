@@ -57,9 +57,11 @@ public class OnelineDAO { // Data Access Object
 				OnelineDTO dto = new OnelineDTO(no, memo, wdate); // DB 내용을 dto에 저장
 				dtos.add(dto);	// dto를 ArrayList에 저장
 			}
-		} catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			e.printStackTrace();
-		} finally {	// 작업이 끝난 메모리 생성 역순으로 해제
+		}
+		finally {	// 작업이 끝난 메모리 생성 역순으로 해제
 			try {
 				if(rs != null) rs.close();
 				if(pstmt != null) pstmt.close();
@@ -89,7 +91,8 @@ public class OnelineDAO { // Data Access Object
 			try {
 				if(pstmt != null) pstmt.close();
 				if(con != null) con.close();
-			} catch (Exception e) {
+			}
+			catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
@@ -107,6 +110,15 @@ public class OnelineDAO { // Data Access Object
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		finally {
+			try {
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		
 	}
 	public void delete(int no) {
@@ -119,6 +131,15 @@ public class OnelineDAO { // Data Access Object
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
