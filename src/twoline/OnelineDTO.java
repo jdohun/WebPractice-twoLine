@@ -5,6 +5,9 @@ public class OnelineDTO { // Data Transfer Object
 	private String memo;
 	private String wdate;
 	
+	public OnelineDTO() {
+	}
+	
 	public OnelineDTO(int no, String memo, String wdate) {
 		this.no = no;
 		this.memo = memo;

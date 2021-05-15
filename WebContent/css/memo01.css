@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Nanum+Gothic&family=Roboto:wght@300&display=swap');
+
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', 'Nanum Gothic', sans-serif;
 }
 
 body {
@@ -30,6 +34,8 @@ hr {
 	padding: 5px;
 	height: 40px;
 	margin: 10px;
+	font-size: 30px;
+	font-family: 'Lobster Two', cursive;
 }
 
 .memoInputForm {
@@ -59,14 +65,12 @@ hr {
 }
 
 #memoList, #memoList th, #memoList td{
-	border: 1px solid #000000;
-	border-collapse: collapse;
 	height:44px;
 }
 
 
 .memoNumber {
-	width : 150px;	
+	width : 120px;	
 }
 
 .memoContents {
@@ -81,6 +85,7 @@ hr {
 
 .wdate {
 	width: 200px;
+	font-family: 'Lobster Two', cursive;
 }
 
 .memoDeleteForm {

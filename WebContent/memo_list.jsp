@@ -9,16 +9,24 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/memo01.css">
-<title>MemoList</title>
+<title>메모장</title>
 </head>
 <body>
 <%
 	OnelineDAO dao = new OnelineDAO();
 	ArrayList<OnelineDTO> dtos = dao.getList();
 %>
-	<table id="memoList">
+	<div id="contents">
+		<h3 id="title">MEMO</h3>
+		<form class="memoInputForm" method="post" action="memo_write.jsp">
+			<input id="memoInput" type="text" name="memo"><br>
+			<input id="memoSubmit" type="submit" value="등록">
+		</form>
+		<hr>
+		<table id="memoList">
 <%
-	for(int i = 0; i<dtos.size(); ++i){
+	/* for(OnelineDTO dto : dtos){ */
+	for(int i = 0; i < dtos.size(); ++i){
 		OnelineDTO dto = dtos.get(i);
 %>
 		<tr>
@@ -35,9 +43,6 @@
 <%
 	}
 %>
-	<%-- <input class="deleteMemo" type="button" value="X" onClick="location.href='memo_delete.jsp?no="+<%=no%>> --%>
-	</table>
-	<span style="margin:16px;"><b>DB조회 성공</b></span>
-	<a href="memo01.html" class="Write">작성</a>
+		</table>
 </body>
 </html>
